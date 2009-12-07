@@ -1,1 +1,15 @@
-hoge.
+weatheroid
+Twitterのリプライベースで動作するお天気通知bot
+
+使い方
+
+1. weatheroid用にTwitterアカウントを1つ作る。
+
+2. ユーザーIDとパスワードをconfig.rbに記入する。
+
+3. 以下の2つのコマンドを定期的に実行するようにOSに設定する。
+$ ruby weatheroid.rb watch	←mentionsをチェックしてリプライを返す
+$ ruby weatheroid.rb notify	←天気をチェックしてリプライを送る
+
+4. 対応地域リスト 'cities' ファイルを再作成するには、以下のコマンド。
+$ ruby gen_cities.rb
