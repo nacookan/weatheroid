@@ -78,6 +78,7 @@ private
         }
       end
     end
+    cities.sort!{|a, b| b[:name].size - a[:name].size}
     return cities
   end
 
